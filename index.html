@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Project</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: hidden;
+        }
+
+        .solar-system-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 40px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            gap: 60px; 
+        }
+
+        .planets-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px; 
+        }
+
+        .celestial-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            background: transparent;
+            border: none;
+            padding: 10px;
+        }
+
+        .celestial-card:hover {
+            transform: scale(1.08);
+        }
+
+        .celestial-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .celestial-image {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .unique-fact {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: #dddddd;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            white-space: normal;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .celestial-card:hover .unique-fact {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Outer Container -->
+    <div class="solar-system-container">
+        
+        <!-- THE SUN -->
+        <div class="celestial-card">
+            <div class="celestial-name">Sun</div>
+            <img class="celestial-image" src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~orig.jpg" alt="The Sun">
+            <div class="unique-fact">The Sun makes up 99.8% of the entire mass of our solar system, packing enough gravitational pull to hold all the planets in orbit, and is 93 MILLION miles away from Earth.</div>
+        </div>
+
+        <!-- PLANET SLIDER THINGY (Holds all planets) -->
+        <div class="planets-row">
+
+            <!-- Mercury -->
+            <div class="celestial-card">
+                <div class="celestial-name">Mercury</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA15162/PIA15162~orig.jpg" alt="Mercury">
+                <div class="unique-fact">Mercury is the fastest planet, going around the sun in just 88 days, and it experiences crazy weather ranging from 800°F during the day to -290°F at night, and is 96.7 MILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Venus -->
+            <div class="celestial-card">
+                <div class="celestial-name">Venus</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA00104/PIA00104~orig.jpg" alt="Venus">
+                <div class="unique-fact">Venus is filled with a thick toxic atmosphere trapping heat in a greenhouse effect, making it the hottest planet in the solar system, and is 106 MILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Earth -->
+            <div class="celestial-card">
+                <div class="celestial-name">Earth</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~orig.jpg" alt="Earth">
+                <div class="unique-fact">Earth (the place we live in) is the only known world capable of having complex life, perfectly balanced with water filled oceans and a protective atmosphere, and is ZERO miles away from Earth.</div>
+            </div>
+
+            <!-- Moon -->
+            <div class="celestial-card">
+                <div class="celestial-name">Moon</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA00305/PIA00305~orig.jpg" alt="The Moon">
+                <div class="unique-fact">The Moon is Earth's natural satellite. It stabilizes our planet's wobble on its axis, leading to a relatively stable climate for life, and is also being 238,855 miles away from us, being the shortest distance to any moon/planet for us in space.</div>
+            </div>
+
+            <!-- Mars -->
+            <div class="celestial-card">
+                <div class="celestial-name">Mars</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA02653/PIA02653~orig.jpg" alt="Mars">
+                <div class="unique-fact">Mars is a dusty desert covered in iron oxide rust. It is home to Olympus Mons, the largest volcano in our entire solar system, and is 158 MILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Jupiter -->
+            <div class="celestial-card">
+                <div class="celestial-name">Jupiter</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA22946/PIA22946~orig.jpg" alt="Jupiter Whole Planet">
+                <div class="unique-fact">Jupiter is a MASSIVE gas giant over twice as heavy as all other planets combined. Its iconic Great Red Spot is an active storm wider than Earth itself, and is 467.6 MILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Saturn -->
+            <div class="celestial-card">
+                <div class="celestial-name">Saturn</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA01364/PIA01364~orig.jpg" alt="Saturn Whole Planet">
+                <div class="unique-fact">Saturn is so light that it would actually float in a giant bathtub! Its amazing ring tracks are composed of billions of pieces of ice and rock chunks, and is 855.2 MILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Uranus (Genuine true-color composite profile captured by Voyager 2) -->
+            <div class="celestial-card">
+                <div class="celestial-name">Uranus</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA01360/PIA01360~orig.jpg" alt="Uranus Whole Planet">
+                <div class="unique-fact">Uranus is uniquely tipped completely on its side, rolling around the sun like a bowling ball. Methane gas absorbs red light, giving its atmosphere its blue color, and SOMEHOW, Uranus is 1.7 BILLION miles away from earth.</div>
+            </div>
+
+            <!-- Neptune -->
+            <div class="celestial-card">
+                <div class="celestial-name">Neptune</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg" alt="Neptune">
+                <div class="unique-fact">Neptune is an ice giant whipped by supersonic winds blowing up to 1,200 miles per hour, making it the stormiest, most wind-full planet in our solar system, and is 2.8 BILLION miles away from Earth.</div>
+            </div>
+
+            <!-- Pluto -->
+            <div class="celestial-card">
+                <div class="celestial-name">Pluto</div>
+                <img class="celestial-image" src="https://images-assets.nasa.gov/image/PIA19857/PIA19857~orig.jpg" alt="Pluto Whole Planet">
+                <div class="unique-fact">Last but not least, Pluto is a complex icy dwarf planet that is no longer recognized in our solar system. Pluto possesses a giant, bright, heart shaped glacier made of nitrogen ice spanning across its surface, and is a staggering 3.7 BILLION miles away from Earth.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
